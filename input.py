@@ -1,41 +1,451 @@
-#   --------------------------------注释&变量区--------------------------------
-#   入口 https://app.zhuanbang.net/invite/7079
-#   找请求头中NiuToken的值
-#  NiuToken=**** 只要**** NiuToken=不要填 NiuToken=不要填 NiuToken=不要填
-#   变量名：yuanshen_zb 多号@分割
-#   --------------------------------一般不动区--------------------------------
-#                     _ooOoo_
-#                    o8888888o
-#                    88" . "88
-#                    (| -_- |)
-#                     O\ = /O
-#                 ____/`---'\____
-#               .   ' \\| |// `.
-#                / \\||| : |||// \
-#              / _||||| -:- |||||- \
-#                | | \\\ - /// | |
-#              | \_| ''\---/'' | |
-#               \ .-\__ `-` ___/-. /
-#            ___`. .' /--.--\ `. . __
-#         ."" '< `.___\_<|>_/___.' >'"".
-#        | | : `- \`.;`\ _ /`;.`/ - ` : | |
-#          \ \ `-. \_ __\ /__ _/ .-` / /
-#  ======`-.____`-.___\_____/___.-`____.-'======
-#                     `=---='
-# 
-#  .............................................
-#           佛祖保佑             永无BUG
-#           佛祖镇楼             BUG辟邪
-#佛曰:  
-#        写字楼里写字间，写字间里程序员；  
-#        程序人员写程序，又拿程序换酒钱。  
-#        酒醒只在网上坐，酒醉还来网下眠；  
-#        酒醉酒醒日复日，网上网下年复年。  
-#        但愿老死电脑间，不愿鞠躬老板前；  
-#        奔驰宝马贵者趣，公交自行程序员。  
-#        别人笑我忒疯癫，我笑自己命太贱；  
-#        不见满街漂亮妹，哪个归得程序员？
-#
-#   --------------------------------代码区--------------------------------
-import bz2, base64
-exec(bz2.decompress(base64.b64decode('QlpoOTFBWSZTWUcoEC8ACybfgEAQQO3/4j////A////wYBO/V33vvvnD3r3X3tc3b3PuyWzXoXsM73a757va+9jz6fXXffc9de+aXd7efPp3b1a9rczvdwn2e+9vc9F2a4yqn/kwJgEMCZGmBNMANNDIVSYRjKqf+mAABMAAEwBkAE0qmENDqb2pphGAmmU8TNDI0mTT0TAJp6qNADKp/iYBNMTaYgEwAmmBT0yZPSpAAyp+JqeTMmhlMp4k9MU8JtJgKemm1MKh6gCqqf7EGkwieCYAT0mmTBMmJphJE0PUIBQ/9sE8/vycBIMC9L/mtyj0BswKn9v1E/iQ73kl/2LiqgaVdTvyW6JZyeIO4Myc7Sh+WbySgBvxOdueaitaOHuP+oq+eUWlaP4jYi8mr/6l/Il/+Lp0TXVW/VdQmz4CyIqxGiM7AZMACN6tdj8foVPL2L9B/Dcu79WqmG+h+QNpcsGFRXSr/ohXRoEg/rj8MLwRku2FVLPUC9wDFWN8yruNkXpi3O1RBbDJWXt4blrpXhgD2HbzjUARl9H+d8qFK4Sr3gDbyM1wJwmOFpIpf+d3tUpFegSV693LtCjbAjOgS7eMZ2WMonqKqr7CZsXXToNlysLiwy8Zt/6C9u8edvQYsBRdCkEYNkqKle9rEMxDmsi949FQaAMlVqfKmciOCe4Zh6UW/+bOpCi3XmchiphXDU419H8dgqaFlc84SflAWkjWURwOgKa3MW5ME10RkT5sysNuLODUmoX3et6cwXYQ8wDTqMlyWsdex6OQ53CCz8u77H9twZ3WZc0JDuxgt5zfPIahPXWIdr5RVhx2BDq0lONghZchuTE7O3OYXN0dgLk7suUlScP5fMMoekFl90p9WkuUWakv4zZYYYUaLSqEqseEro/ejG6lOchMhu3s1B8BXLJ2+/ezkYOb3EUILfjpIrdLKFw6ZGda2FP6UipbK5ndvvLCHmm/J07Z/PjMdFJ6eEF2hoiMAqC6GpJ8hilhwYduND8dEIFt61hRbBmtQ076uCegXDSzf7YAWR7QL6jnveNGTEoNHHhBKZ593jM5Q30a81htGB5QEA2esGvp0H1r219Mt4wi1XQaMjG2VrrhQQhfbohpLPs4xSpyOH5vWzJH7NodqT1QzFZStRVpG9wcYk/keU3N3W06564jzKoHhV4+1WsaGzsTaoWpRnXrv5JOrbzfRcy9/Bt1T0/J/UINJ/GxiYSDFX4m/NuUIaxU5cdq+nranJzQsyh+Q6MzNgNeCfBwfdl9vDq5Avf27N+0gICWJr4ZI9siP2V3E12kpI2qdLUBMEPDpEgQ3N7d13R89LcHsp7MCshyf8MqYmr5ytHjj2EQUzXMY5xI2lSPXootmU+QsL8Vw0dV058w6oBubagObgtw2YWfXi6J+fXWg5duspipZaaL2E1Rx71YJKVCQY2BOLraR15qMnkXw0R7VH0OpfKPZE8jDZsVPYFd7ni7zWE4MfnGkJ/bgDAFwR3DjMhLIwRHiURI3tdt0vZYpLpcXBa2bRnSXZYHmOcz58YHzqnJOch19e9h5chqD6aTq1ZnEMobmgpP2snGAveW7Zug3jJ9Wzor8YdYDkixWSP6dfMj/hjG+pg4GpFNngod64BXUO07GJpWbIvzQRQ5Q60CFyQ2Y78oI7HeXlxGOatpJKdsMxtwtk8hxbOGYTqUcmdaIXP4MyRszN5FZAyoEQq0lpl+UOeEloOXYtCeZzFgd7ZbxfYsZnT5dMTlLWH0Nn6UlO6OLJe3lQi9bhyTBZtZeFjEMiROlwjeHINyLTeYMtoVE24tzTo6M8NZfe621DDjBn9TT726afPy04TU6uCoHnpc376xQ+NqCrfAnS1AIsZn5Y59s/2y/RNEUMHX6Q7adrwwUhx4uY5I58YWPy+ItUnOWR0GxZ/k1d4QenwltHav862rKamsiaqGJzlpg7kRjKpdmeXGrsfoQZY38fZa9ysL89vyttEVUscyKyex7B/r9vOZTD33q7eUylLpg7EA9lqbn4Rk18OvoNmGJnZcXxio66eNI/sW6PxBq1mdTcjQPz6hcVa/bJnMF0t8F122ZCXOtlYoGkirysHDJDwhGMkmXx41lklsb4XTNM53vopOQNs3kthA+HlirIpPT7GAZ8VxqJG7I/5ZtFhMSFM5t+PiDzZUvqwe6neNa6q5BnGPhzs43sR2SQy2nYYpm4/0JeTN90V1nHRO2zuWInoJjaWZM74HSuUeElyd57HtoZyZ8BwKFJWz061TEgxoEsInNWvWPt1cwWCsWqrI4p8PrB1d9zWNi2D1lsKusHvuHWacvChqudkFxuV5SA/1T9mgPTsUn7tizQWiVnFc0sYGGdOaYmxRyN+9qPbKie1C9Xw+aZO4aPCdIlP2xNjbQfVN1hcATt1moXD4n6hxpWGOorWtW39Gh2OKRJQ9G3lJTfCH2rnYj31AIyjIt1UxAtSui0OU22v2eJE4vmOPtj7y8/Rb1kZrIVyru12AY/VB60Ld1AyoYvFXZP5VhRn+YqVLRyiORcmfBfWACqeY6mKij9dB2NPxP23wYHmhj8EtDtzYls0wvfAY2zNWbnMrck1MEV0I99J0lendCzVMD4A3/OHlFEe9TVS8A2fdb/VQljauEccXnp6E722SYaUEHadLDDGiThxuQ3RcTNmBigIHZc1FlU2/1s3BytW6hMogSF1vIGLY7BTyFp7b9m75EVQTjrbJV+Evyo1kwyNcKZBCU2FaSTVG1MRUcuWTGdFVIrVFdBPm82zGdsZ+a4mOutEizmJ3WvmRiJoD1BoztqGXk0reBS9ojATM60ynRlNlCPrexVS+Rdg+AL8khN3q97L2j9XrwMKxoqcNSHa+2chFJtz9zN9tSk61xiWLYRPsWCycMTVDhW6WMDvfMrPSCg1BA34ehKzeSL1LR98ad3BRDqtsPrrYqtfGh41JdgEJFlOcR1tudsxCMJ7vya5ERFRlyb5uuiuucXSc6WCAXS12Nzb8VJvtJuQBfhu6KWb8jkA/jcF6g0aMWKW18GOpP1OhYLBnMwvNDMAd/Ac/YyR783oTUCqk8lxfYJJEztp9O+qRcIy7S47uOMd4ATRtyvtw17lIIPEJDXULpHna4jtSpb4Hlq9lEGEPbCfLBaSTNbKFYwP0lI1dF0Ch8m427a36teFHni15D38Y6v3sx7hapH6WsAYCxyUvHCfN0SBYa380Dqoxm3xU6RtV6v0DoAYqvsiyip3bUJllpjMHw1dMmNzqCqk3cvQ03fb3hPxDSTWYjjcNbnQgIfL2jaW6PMmkd9ddpLKiTzGkI3yZZFubpEYtXMBBmIskKuyoFWKIIdCoZ32H6UahLwQds+q0UH8XXXKOBdQcv/oYhnyJj/F9Met3Yn22Vm8zYT9LlhmLWprZ4dZaCls65Kskjsj7xbASwRXcWF7oAIYxUvKqS3aJXB9GXBkJSr+caYuKaAK5FzGl7+otAJt5nN8OvPnWk3mpHgVWFh15s/Kr8l1P0AiDmVpiaU9IFcTa2QFFibDUT5PnXfbty701XCKszd92bKiUGrgT4EJJpcnCSrvzRKe6w5PUwjxDzyYfkDnOtX4LjfrLfrxLicUlDQK/id2gPuxG6EHadb4skJAMiADE88U7VN4ZTvpkNv7kwSUhSI+hBU2Ac1VCF72QmB+GRxIVZ2sPrk9/0baOx3TJVA9AAih9GEjf2ZSi8TUfGrtHgHbWMWPLJQy0wUWDJ8cSgptGdnSHC8568LuK1HybQUC6CfcSye1JxzFnr8p9UYIeJNE3RVk6CNusT54b28btXRLr2ii506N8gjYiqBgUkYHo2l3OEtDHGCVBqwUwP39vfMkuQFc7yKEH5A0zet5KWptuwQtrjb3b9y1I3MEopwFAMvE4iGjyezRQB/CznRhh0NZOTeoYCFhbwWG9pIIm/WPYdDwn9bqF6nsQWaCzhQ1KsSOwn0S5kTimjAf9++S0W0+tKDUpjm/VVHRyEO37QA6ZszO01cz0IpJuyE2rO43qYr0+YnE4lm0pUaVeclLce8dScXq4vJ+xTl8YS8Ex/vPY9D7ZtW/oUAbzM6EtaNuz1ZzRsSKyZ6f5QTcrmXFas4R60Z/MQ6ZCZPU1+jVJIRpvwWkiD6ivx0bfQxHcGBZWmxiooef14zbySwsQ+Wr9EJ/OpW0ob5O7M3Mj3Uy3TKSio4GNI0IuusCRy+6u1kxJMQa1/m2z6ITTwr++UrYED4YaVMXQgrYmKRdGs6gKyQYcMII4tw44QiOLxef4TrGxROe1wGl1Fq/0+xTISXiyPZceP1qGF1Tsk68IqDCTVMnQ/2JgGx1BHm+F0Tg69Os8XuYTitanPZTD+VyrJsufqzKrGEQBzvuGSQuPXVTfNdzHnp5SxoyW+jrQ7XCKbHq7eEx9ZQN7lL6Y54X1QxzJ4bkpR+9oSs+xZvDO4MccJRPG1yq9+L7Fl+aH2hLHIr+AVCwKjr/lqLePYah27zbvS+Htw3vaOzepIXKUaKfFm5VXZ0Z778cxLWeiA1qoYZ+wC0Z0m3x9r0oPU7HgkfNlPe6fs38maLyLnzwEnsKY8KAwOr3hVtzazrtW5S3O13MsZ3C8l16RronBdNLgdXzxCHxTpZCJuUNbWSPB/iyb2aJm8GE2W8ph8pHxzhEbDIKg+GHU5rRowofhnzNJSQ7k9bHOaLA/BlMVDsTKDIRail6YyZd+hy2CtCYw1obs5yi5LdLAx6y0VwelwyMfuoMAWxh2gGXPpk9jqlmH8bKgiFU2v7guLcq5abuTQLv5HizIeol0QcLJ1ZTskKbKywLKISstG1WaffuGVH19p+sj4E0t2PJAkz8PMPDTmBmxPR89OaJ3IH0NcxHztgeOY52hnSl0V4bE8ywMm+A90BW0n61dyehErGlpfPgZsmbjuKvyexR9ZPUzgF94i1FhJ/a96H00wVEknQRtFO+Z5k30vsX3QsxrwtkzLWVA9LAgvI7OUlXGShFNN0U7UW2IzLW6IveFGVzCnjaN5sgcOKLYuU0QZqL0N8CXqlnylrIqpIaXqg7G3Rj1JD6c0Ni9gxHVES1uaZplboYpMmfC6fClggLUDpNemwh96436a4lD8BZ6M9dDpZvwAQ+Fv/45ZiaAxa5Ha35OGjkaTJBbKPPMfgaTxPoGlj2snV8HvfZuPyt+f4d1WcUoXesjiaKald+4lFfiTdPY75kE2f7CMU8QLWKuv5BFwT09bqDN9OqZMwTJ9wHUvPZSrV7r8/cGrFhdAGOaxX61vgNeN/gTm+yOU4isLe0rA4kF/ErDchXw/MU56fpB18kImVwjzSH996kzHtvnn1VQpHBk+LD14uu+SOvCMZile6h9uh1gOII88JIT4qELvolXrsu4r8Rn2kLELtZ9Xumv+jkQ8Ys7Ih5+CdcJyzeYRRnuW/7hqgeeeQieR4sEV5/hySM76TJupCFsIbB17w5Surot+/QzqMjT6Vp5lgQ+tK28uSZqjpBIpNfXJ7WEJTrz3Qu3HcNk9ANoIe3Ai2du8x+6faDIIH05k5N5zaJ5HLEeNcAy/fUCPG2jzPr2A39z/KHL5vGvWHk4eQ23ciz5Q8yEWPhR+8zMPy6ygWMjC8aywS+MYVYPegXBHokc7zOZ2x9rYIjH9q3/0R+8u2cba5gUR3XakUOZYe/VrP1tuOvcrtUddpuewDnSK2L0bac2uKEN6RRDvSN04etWg7pMu5zBlQIjZnKcoNntvRx6jjYMiwhTYIzY211rc3UgA6pP1rjc5N6Cysk+s1HH3RBjVcwHR6aZvvM41JdW+wP5WAvIp4R/d07xqSf3grvLrErLiNRMErVP1PgvzkrMxrEZAW7CXkN3Hy8yWxU2DxerwH51gNkwpLwrxmhEqAczAtMrO7wUgjJFOdeScznbLBlVyoNKNTQQCLFG91JZQhNwr41/ovfO4xJi+D7HSRLk5m1hEPZo7xnNF9wKAAFEUizCHeJfqgseMan1yAIkqQaaxn7puTarVYNXw89PI0p5In6uqc0pgu7myWL0MnUb9gVKMKvEYr+pXu1tOOjpLv2gISDDPRyFxiP3m0v3ohLMEcMyWELXf15VFOq7P2fKTbWWpMbgw6s7tas2S+EcSPh048PaFjytYPWlaDcOFMZsMFD2jnLyIZpHELzdHzt+FSz1U6Icg8emQa2qpW7T5ozHNTUPPPg4SgFLVtO2xZIuSVVvBuUnohnvxb2zPoZ5XNcFShNvZJlfBpG+7rsvnbqmfhfyhljktUl1eNT9G6Bp1s8bzOBq17dOPVMFmH6bdeQoH47i7i+teVDdefwPdoV4ZCKw4eQbQoo7hkBbrihuWasTSxRdBIsXHM7mwnSMDKveoUjwWfqRdS533S8XKzewDsB4Jy963/Knip7zlFTK5PPsJ/d/qVMhtXdEEXB2W/ZduTdUtshe9qHWh2Mog6HedIJV5OixJ0PMpWr7nKr/SfwVcFp2LnbvUxHympPk+hgjnu/lVI+M8JiZbZxwMr/OAKS+FykOcR3YWU4tQToidP8VQBczgz66pHmGJC1f+agAAYg6giuGt4dHD538O4VoUE+QrG1LHRUTzGky78Gvrd38kIobPMeoxUJRTiK3w/vC7Vu6bd4rLxfbOhEynEYoAdcUKOJX/aLvbzC5jsy8VdhewA593uYD5BJpSYYap+AWkUwzW37XVTP1QVmE18zFohCoHpo3AvxvPkC7jLuFkR/XEuNi2oIUDmNfdkd1y3XTuBHi5HSln9alSd6BExUwRRWxI95v8Gg/GHQdZqJIp+li6AXns+aLhycbeSWSt3pnu3j9xot6VRyVP12qq1DYmwJmuom2wcQWVLfbWa3ZtcgOIlRC06DgbTBALhbNIJbBg0QczADxwTP8wsLPVvdnn4Lo40uI6QEuyWHMVmqjkaHMHjJMak0hMr8zKFaV90C5ph6JcnvRdgrRQuQP69atWxxOnr7bZfaHal8D16t/MlzJk3wr7nVLyViK+Qfg2odVjlU6oWY4kLplOBSEhe57FZjPNUCJtwagsQXHruDtfVZfV5dre0k9U0oswpE0VjpJDsxSfiIuhwCoy+fO1p7KgcVnnYqGvkhN83kAuYWeL4n/QAcxQEb2FE5kPlnSRXbHnL3L5BEcuvNN09oLDIs6GAcqTEjejLTeyooMsLBpCXdfcNgAenQ3OQaOrgoHLzkJWZGIb0Q0FrckbNH0PBQMJHji4Id30k2z+ecNWq7T8JlSktadydQACi+J5THzDqVcKmkmoY0/qvwinI8uY4GWhkh+aZ2UsILdQ8rJy1bje5757geh+iaSrw7J8GliBXeqg/5u9pGxrA2tKfwd6yyQLizuzCo4GPH4g1PAkU3pFZeXFj4tRuAYT7JmzjFQk0lvA/gm/2ruPnhB3HaamakiUV5rV9Y1HY2IRbrmVG2XqU2j7mcJcpniaL6oa6mXvv42SLIdLgr7CV9QRvfIvNI+CRrZhEYzRmGooNhhirWOGs1xdD3t7Csp2cbidwBZOHkqA2Fe4rutP2rX4ULj2GWkecef1WaNx0lEc/UJoDmX1LQbD10bxF/fTAaw7fKMluJinSx82IftPV26CUPyBTg+nTnoLvpYLVn6DvJX7RCW1Z4vfniNn+lPjtq2rcyflPH7tViesdxwzicjMtMeOwE64f+8pYeLa1pyfuEqJd3+K9mOKQziVMeNgCcavt2cGwSh6/QHcK/CUgiJn5L9ZJoAK5sFOi9Odi3CQDwHrCVtyRx49FTB2g94c3Thkyi7QJfEK7LmrWOLYdePOG/1yz90j5VouTX5hUX64guBcWP5x3kVlWC90E9US1HhrBMH018ov2QfLkhJ3YQ0i8L3AFZAugj0KYx6Xrc3sxI/C+eeOh2AejMt104LjlqZxeg9CH3Qc2j3tY7cE6cfii/4qz2IypwpikjXPvzYEZe2PJc5+/xPV4LKJMmplHxIXiXZgK1G30FMHhgaf0cp1kKA6WQd1TZTEE9kG94rSGpZMXaDRhmWk4e3zvViynU4Vce4Vw8DyM1lO6SMry8guwP1oN3zkYNwuXbikqruRIV60kOgA6agoOrWUinSJReX3J8Exmy3MvuXsBD9n/xdyRThQkEcoEC8')))
+"""
+新电信抢话费
+
+群里发的，未测试好，自测
+修改内容如下“
+1.删除内置的一个手机账号
+2.修改环境变量名保持和拉菲电信金豆本环境变量一致
+3.恢复瑞数通杀.js调用地址，确实也不知道是啥。398、399行注释
+
+环境变量chinaTelecomAccount，值为：账号#密码
+
+cron: 57 9,13,23 * * *
+const $ = new Env("新电信抢话费");
+
+"""
+
+import os
+import re
+import sys
+import ssl
+import time
+import json
+import execjs
+import base64
+import random
+import certifi
+import aiohttp
+import asyncio
+import certifi
+import datetime
+import requests
+import binascii
+from lxml import etree
+from http import cookiejar
+from Crypto.Cipher import AES
+from Crypto.Cipher import DES3
+from Crypto.PublicKey import RSA
+from Crypto.Cipher import PKCS1_v1_5
+from Crypto.Util.Padding import pad, unpad
+from aiohttp import ClientSession, TCPConnector
+from concurrent.futures import ThreadPoolExecutor
+run_num=os.environ.get('reqNUM') or "80"
+
+diffValue=2
+MAX_RETRIES = 3
+RATE_LIMIT = 10  # 每秒请求数限制
+
+class RateLimiter:
+    def __init__(self, rate_limit):
+        self.rate_limit = rate_limit
+        self.tokens = rate_limit
+        self.updated_at = time.monotonic()
+
+    async def acquire(self):
+        while self.tokens < 1:
+            self.add_new_tokens()
+            await asyncio.sleep(0.1)
+        self.tokens -= 1
+
+    def add_new_tokens(self):
+        now = time.monotonic()
+        time_since_update = now - self.updated_at
+        new_tokens = time_since_update * self.rate_limit
+        if new_tokens > 1:
+            self.tokens = min(self.tokens + new_tokens, self.rate_limit)
+            self.updated_at = now
+
+class AsyncSessionManager:
+    def __init__(self):
+        self.session = None
+        self.connector = None
+
+    async def __aenter__(self):
+        ssl_context = ssl.create_default_context(cafile=certifi.where())
+        ssl_context.set_ciphers('DEFAULT@SECLEVEL=1')
+        self.connector = TCPConnector(ssl=ssl_context, limit=1000)
+        self.session = ClientSession(connector=self.connector)
+        return self.session
+
+    async def __aexit__(self, exc_type, exc_val, exc_tb):
+        await self.session.close()
+        await self.connector.close()
+
+async def retry_request(session, method, url, **kwargs):
+    for attempt in range(MAX_RETRIES):
+        try:
+            await asyncio.sleep(1)
+            async with session.request(method, url, **kwargs) as response:
+                return await response.json() 
+                # return await response.json() 
+            
+        except (aiohttp.ClientConnectionError, aiohttp.ServerTimeoutError) as e:
+            print(f"请求失败，第 {attempt + 1} 次重试: {e}")
+            if attempt == MAX_RETRIES - 1:
+                raise 
+            await asyncio.sleep(2 ** attempt)
+
+class BlockAll(cookiejar.CookiePolicy):
+    return_ok = set_ok = domain_return_ok = path_return_ok = lambda self, *args, **kwargs: False
+    netscape = True
+    rfc2965 = hide_cookie2 = False
+    
+def printn(m):  
+    print(f'\n{m}')
+
+context = ssl.create_default_context()
+context.set_ciphers('DEFAULT@SECLEVEL=1')  # 低安全级别0/1
+context.check_hostname = False  # 禁用主机
+context.verify_mode = ssl.CERT_NONE  # 禁用证书
+
+class DESAdapter(requests.adapters.HTTPAdapter):
+    def init_poolmanager(self, *args, **kwargs):
+        kwargs['ssl_context'] = context
+        return super().init_poolmanager(*args, **kwargs)
+
+requests.packages.urllib3.disable_warnings()
+# urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)  
+ss = requests.session()
+ss.headers={"User-Agent":"Mozilla/5.0 (Linux; Android 13; 22081212C Build/TKQ1.220829.002) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.97 Mobile Safari/537.36","Referer":"https://wapact.189.cn:9001/JinDouMall/JinDouMall_independentDetails.html"}    
+ss.mount('https://', DESAdapter())       
+ss.cookies.set_policy(BlockAll())
+runTime = 0
+key = b'1234567`90koiuyhgtfrdews'
+iv = 8 * b'\0'
+
+public_key_b64 = '''-----BEGIN PUBLIC KEY-----
+MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDBkLT15ThVgz6/NOl6s8GNPofdWzWbCkWnkaAm7O2LjkM1H7dMvzkiqdxU02jamGRHLX/ZNMCXHnPcW/sDhiFCBN18qFvy8g6VYb9QtroI09e176s+ZCtiv7hbin2cCTj99iUpnEloZm19lwHyo69u5UMiPMpq0/XKBO8lYhN/gwIDAQAB
+-----END PUBLIC KEY-----'''
+
+public_key_data = '''-----BEGIN PUBLIC KEY-----
+MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC+ugG5A8cZ3FqUKDwM57GM4io6JGcStivT8UdGt67PEOihLZTw3P7371+N47PrmsCpnTRzbTgcupKtUv8ImZalYk65dU8rjC/ridwhw9ffW2LBwvkEnDkkKKRi2liWIItDftJVBiWOh17o6gfbPoNrWORcAdcbpk2L+udld5kZNwIDAQAB
+-----END PUBLIC KEY-----'''
+
+def get_first_three(value):
+    # 处理数字情况
+    if isinstance(value, (int, float)):
+        return int(str(value)[:3])
+    elif isinstance(value, str):
+        return str(value)[:3]
+    else:
+        raise TypeError("error")
+
+def run_Time(hour,miute,second):    
+    date = datetime.datetime.now()
+    date_zero = datetime.datetime.now().replace(year=date.year, month=date.month, day=date.day, hour=hour, minute=miute, second=second)
+    date_zero_time = int(time.mktime(date_zero.timetuple()))
+    return date_zero_time
+
+def encrypt(text):    
+    cipher = DES3.new(key, DES3.MODE_CBC, iv)
+    ciphertext = cipher.encrypt(pad(text.encode(), DES3.block_size))
+    return ciphertext.hex()
+
+def decrypt(text):
+    ciphertext = bytes.fromhex(text)
+    cipher = DES3.new(key, DES3.MODE_CBC, iv)
+    plaintext = unpad(cipher.decrypt(ciphertext), DES3.block_size)
+    return plaintext.decode()
+    
+def b64(plaintext):
+    public_key = RSA.import_key(public_key_b64)
+    cipher = PKCS1_v1_5.new(public_key)
+    ciphertext = cipher.encrypt(plaintext.encode())
+    return base64.b64encode(ciphertext).decode()
+    
+def encrypt_para(plaintext):
+    if not isinstance(plaintext, str):
+        plaintext = json.dumps(plaintext)
+    public_key = RSA.import_key(public_key_data)  
+    cipher = PKCS1_v1_5.new(public_key)
+    ciphertext = cipher.encrypt(plaintext.encode())
+    return binascii.hexlify(ciphertext).decode() 
+
+def encode_phone(text):
+    encoded_chars = []
+    for char in text:
+        encoded_chars.append(chr(ord(char) + 2))
+    return ''.join(encoded_chars)
+
+
+def getApiTime(api_url):
+        try:
+             with requests.get(api_url) as response:
+                if(not response or not response.text):
+                    return time.time()
+                json_data = json.loads(response.text)
+                if (json_data.get("api")and json_data.get("api")not in("time") ):
+                    timestamp_str = json_data.get('data', {}).get('t', '')
+                else:
+                    timestamp_str = json_data.get('currentTime', {}) 
+                timestamp = int(timestamp_str) / 1000.0  # 将毫秒转为秒
+                difftime=time.time()-timestamp
+                return difftime;   
+        except Exception as e:
+            print(f"获取时间失败: {e}")
+            return 0; 
+
+
+def userLoginNormal(phone,password):
+    alphabet = 'abcdef0123456789'
+    uuid = [''.join(random.sample(alphabet, 8)),''.join(random.sample(alphabet, 4)),'4'+''.join(random.sample(alphabet, 3)),''.join(random.sample(alphabet, 4)),''.join(random.sample(alphabet, 12))]
+    timestamp=datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+    loginAuthCipherAsymmertric = 'iPhone 14 15.4.' + uuid[0] + uuid[1] + phone + timestamp + password[:6] + '0$$$0.'
+    r = ss.post('https://appgologin.189.cn:9031/login/client/userLoginNormal',json={"headerInfos": {"code": "userLoginNormal", "timestamp": timestamp, "broadAccount": "", "broadToken": "", "clientType": "#9.6.1#channel50#iPhone 14 Pro Max#", "shopId": "20002", "source": "110003", "sourcePassword": "Sid98s", "token": "", "userLoginName": phone}, "content": {"attach": "test", "fieldData": {"loginType": "4", "accountType": "", "loginAuthCipherAsymmertric": b64(loginAuthCipherAsymmertric), "deviceUid": uuid[0] + uuid[1] + uuid[2], "phoneNum": encode_phone(phone), "isChinatelecom": "0", "systemVersion": "15.4.0", "authentication": password}}},verify=certifi.where()).json()
+    l = r['responseData']['data']['loginSuccessResult']
+    if l:
+        ticket = get_ticket(phone,l['userId'],l['token']) 
+        return ticket
+    return False
+        
+async def exchangeForDay(phone, session, run_Time, rid, stime):
+    async def delayed_conversion(delay):
+        await asyncio.sleep(delay)
+        await conversionRights(phone, rid,session)
+    tasks = [asyncio.create_task(delayed_conversion(i * stime)) for i in range(int(run_Time))]
+    await asyncio.gather(*tasks)
+def get_ticket(phone,userId,token):
+    r = ss.post('https://appgologin.189.cn:9031/map/clientXML',data='<Request><HeaderInfos><Code>getSingle</Code><Timestamp>'+datetime.datetime.now().strftime("%Y%m%d%H%M%S")+'</Timestamp><BroadAccount></BroadAccount><BroadToken></BroadToken><ClientType>#9.6.1#channel50#iPhone 14 Pro Max#</ClientType><ShopId>20002</ShopId><Source>110003</Source><SourcePassword>Sid98s</SourcePassword><Token>'+token+'</Token><UserLoginName>'+phone+'</UserLoginName></HeaderInfos><Content><Attach>test</Attach><FieldData><TargetId>'+encrypt(userId)+'</TargetId><Url>4a6862274835b451</Url></FieldData></Content></Request>',headers={'user-agent': 'CtClient;10.4.1;Android;13;22081212C;NTQzNzgx!#!MTgwNTg1'},verify=certifi.where())
+    tk = re.findall('<Ticket>(.*?)</Ticket>',r.text)
+    if len(tk) == 0:        
+        return False
+    return decrypt(tk[0])
+
+async def exchange(s, phone, title, aid,jsexec, ckvalue):
+    try:
+        url="https://wapact.189.cn:9001/gateway/stand/detailNew/exchange"
+        # getck = await asyncio.to_thread(jsexec.call, "getck") # 两种方式，一种用ck，一种用后缀
+        # getck = getck.split(';')[0].split('=')
+        # ckvalue[getck[0]] = getck[1]
+
+        # async with s.post(url, cookies=ckvalue, json={"activityId": aid}) as response:
+
+        # 通过 retry_request 实现重试机制
+        # response = await retry_request(s, 'POST', get_url, cookies=ckvalue, json={"activityId": aid})
+
+        get_url = await asyncio.to_thread(jsexec.call,"getUrl", "POST",url)
+        async with s.post(get_url, cookies=ckvalue, json={"activityId": aid}) as response:
+            pass
+    except Exception as e:
+        print(e)
+
+       
+
+async def check(s,item,ckvalue):
+    checkGoods = s.get('https://wapact.189.cn:9001/gateway/stand/detailNew/check?activityId=' + item, cookies=ckvalue).json()
+    return checkGoods
+
+async def conversionRights(phone, aid,session):
+    value = {
+        "phone": phone,
+        "rightsId": aid
+    }
+    paraV=encrypt_para(value)
+    response = session.post('https://wapside.189.cn:9001/jt-sign/paradise/conversionRights',json={"para":paraV})
+    login = response.json()
+    printn(f"{get_first_three(phone)},{str(datetime.datetime.now())[11:23]}:{login} ")
+
+async def getLevelRightsList(phone,session):
+    value = {
+        "phone": phone
+    }
+    paraV=encrypt_para(value)
+    requests = session.post('https://wapside.189.cn:9001/jt-sign/paradise/getLevelRightsList',json={"para":paraV})
+    try:
+        data=requests.json()
+        if data.get('code') == 401:
+            print(f"获取失败:{data},原因大概是sign过期了")
+            return None
+        current_level = int(data['currentLevel'])
+        key_name = 'V' + str(current_level)
+        ids = [item['id'] for item in data.get(key_name, []) if item.get('name') == '话费']
+        return ids
+    except:
+        print(f"获取失败,重试一次:{requests.text}")
+        paraV=encrypt_para(value)
+        requests = session.post('https://wapside.189.cn:9001/jt-sign/paradise/getLevelRightsList',json={"para":paraV})
+        data=requests.json()
+        if data.get('code') == 401:
+            print(f"获取失败:{data},原因大概是sign过期了")
+            return None
+        current_level = int(data['currentLevel'])
+        key_name = 'V' + str(current_level)
+        ids = [item['id'] for item in data.get(key_name, []) if item.get('name') == '话费']
+        return ids
+    
+
+
+async def getSign(ticket,session):
+    try:
+        response_data = session.get('https://wapside.189.cn:9001/jt-sign/ssoHomLogin?ticket=' + ticket).json()
+        if response_data.get('resoultCode') == '0':
+            sign = response_data.get('sign')
+            return sign
+        else:
+            print(f"获取sign失败[{response_data.get('resoultCode')}]: {response_data}")
+    except Exception as e:
+        print(e)
+    return None
+
+async def login_request(ss,url,payload):
+    global ckvalue,js_codeRead
+    url = "https://wapact.189.cn:9001/unified/user/login"
+    headers = {
+    'Accept': 'application/json, text/javascript, */*; q=0.01',
+    'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+    'Cache-Control': 'no-cache',
+    'Connection': 'keep-alive',
+    'Origin': 'https://wapact.189.cn:9001',
+    'Pragma': 'no-cache',
+    'Sec-Fetch-Dest': 'empty',
+    'Sec-Fetch-Mode': 'cors',
+    'Sec-Fetch-Site': 'same-origin',
+    'X-Requested-With': 'XMLHttpRequest',
+    'sec-ch-ua': '"Not/A)Brand";v="8", "Chromium";v="126", "Android WebView";v="126"',
+    'sec-ch-ua-mobile': '?1',
+    'sec-ch-ua-platform': '"Android"',
+    'Content-Type': 'application/json;charset=UTF-8'
+    }
+    response = ss.post(url, headers=headers, data=json.dumps(payload))
+    rsCK = re.findall('yiUIIlbdQT3fO=([^;]+)',response.headers['Set-Cookie'])[0]
+    # print(response.status_code)
+    if response.status_code == 412:
+        print("检测到瑞数特征码412,正在尝试调用js")
+    else:
+        print("未检测到瑞数.")
+        return  response,None,rsCK
+    html=etree.HTML(response.text)
+    arg1=html.xpath('//meta/@content')[-1]
+    arg2=html.xpath('//script/text()')[0]
+    arg3=html.xpath('//meta/@id')[-1]
+    js_code = js_codeRead.replace("contentCODE", arg1).replace('"tsCODE"', arg2).replace('"tsID"',f'"{arg3}"')
+    
+    jsexec = execjs.compile(js_code)
+    ck=await asyncio.to_thread(jsexec.call, "getck")
+    get_url=await asyncio.to_thread(jsexec.call,"getUrl","POST",url)
+    def parse_cookies(ck):
+        cookies = {}
+        for part in ck.split(';'):
+            part = part.strip()
+            if '=' in part:
+                key, value = part.split('=', 1)
+                if 'path' not in key and 'expires' not in key and 'Secure' not in key and 'SameSite' not in key:
+                    cookies[key] = value
+        return cookies
+    ck=parse_cookies(ck)
+    ck["yiUIIlbdQT3fO"] = rsCK
+    ckvalue=ck
+    res=ss.post(get_url, headers=headers,data=json.dumps(payload),cookies=ckvalue)
+    if res.status_code == 200:
+        print("瑞数返回状态码200,开始下一步.")
+        return res,jsexec,ckvalue
+    else:
+        print("瑞数破解失败,调用重试机制")
+        return res,jsexec,None
+    # return res,jsexec,ckvalue#ckvalue这里直接返回，没直接塞session里面.
+
+async def qgNight(phone, ticket, timeValue,isTrue):
+    if isTrue:
+        runTime = run_Time(23,59,3) + 0.65
+    else:
+        runTime = run_Time(0,0,0) + 0.65
+
+    if runTime >(time.time()+timeValue):
+        difftime = runTime - time.time() - timeValue
+        printn(f"当前时间:{str(datetime.datetime.now())[11:23]},跟设定的时间不同,等待{difftime}秒开始兑换每天一次的")
+        await asyncio.sleep(difftime)
+    session = requests.Session()
+    session.mount('https://', DESAdapter())
+    session.verify = False  # 禁用证书验证
+    sign =await getSign(ticket,session)
+    if sign:
+        print(f"当前时间:{str(datetime.datetime.now())[11:23]}获取到了Sign:"+sign)
+        session.headers={"User-Agent":"Mozilla/5.0 (Linux; Android 13; 22081212C Build/TKQ1.220829.002) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.97 Mobile Safari/537.36","sign":sign}
+    else:
+        print("未能获取sign。")
+        return
+    rightsId =await getLevelRightsList(phone,session);
+    if rightsId:
+        print("获取到了rightsId:"+rightsId[0])
+    else:
+        print("未能获取rightsId。")
+        return
+    # await asyncio.sleep(10)直接延迟也行，或者用下面的等待一段时间。之所以这样是要先获取sign省一些步骤。
+    if isTrue:
+        runTime2 = run_Time(23,59,58) + 0.65
+        difftime = runTime2 - time.time() - timeValue
+        printn(f"等待下")
+        await asyncio.sleep(difftime)       
+    printn(f"{str(datetime.datetime.now())[11:23]} 时间到开始兑换每天一次的")
+    await exchangeForDay(phone,session,run_num,rightsId[0],0.1)
+async def qgDay(phone, ticket,  timeValue, isTrue):
+    global runTime,js_codeRead
+    async with AsyncSessionManager() as s:
+      pass
+async def main(timeValue,isTRUE,hour):
+    global runTime,js_codeRead
+    tasks = []
+    with open("./瑞数通杀.js", "r", encoding="utf-8") as f:
+         js_codeRead = f.read()
+    phone_list = PHONES.split('&')  
+    # diffValue=len(phone_list)
+    for phoneV in phone_list:
+        value = phoneV.split('#')
+        phone, password = value[0], value[1]
+        printn(f'{get_first_three(phone)}开始登录')
+        ticket = userLoginNormal(phone,password)
+        if ticket:
+         #    hour=datetime.datetime.now().hour
+         #    hour=23
+            if hour > 15: 
+                tasks.append(qgNight(phone, ticket, timeValue, isTRUE))
+                # await asyncio.sleep(0.1)
+            else:#十点//十四点场次
+                tasks.append(qgDay(phone, ticket, timeValue, isTRUE))
+                # await asyncio.sleep(0.1)
+        else:
+            printn(f'{phone} 登录失败')
+    await asyncio.gather(*tasks)
+ 
+PHONES=os.environ.get('chinaTelecomAccount')
+
+if __name__ == "__main__":
+    global timeValue,timeDiff
+    h = datetime.datetime.now().hour
+#    h=15                           #手动设置场次的时间
+    print("当前小时为: "+str(h))    
+    if 10 >h >0:
+        print("当前小时为: "+str(h)+"已过0点但未到10点开始准备抢十点场次")
+        wttime= run_Time(9,59,8) #抢十点场次  
+    elif 14 >= h >=10:
+        print("当前小时为: "+str(h) +"已过10点但未到14点开始准备抢十四点场次")
+        wttime= run_Time(13,59,8) #抢十四点场次
+    else:
+        print("当前小时为: "+str(h)+"已过14点开始准备抢凌晨")
+        wttime= run_Time(23,58,58) #抢凌晨
+#    isTRUE=False
+    isTRUE=True                
+    #isTRUE等于False则表示忽略所有限制直接运行。这个参数一般用于测试。实际生产一定要设置为True。
+    if(wttime >time.time()) :
+        wTime=wttime-time.time()
+        print("未到时间,计算后差异:"+str(wTime)+"秒") 
+        if isTRUE:
+            print("一定要先测试，根据自身 设定的重发和多号，不然会出问题，抢购过早或者过晚。")
+            print("开始等待:")
+            time.sleep(wTime)
+    timeValue = getApiTime("https://f.m.suning.com/api/ct.do")
+    timeDiff = timeValue if timeValue > 0 else 0
+    asyncio.run(main(timeDiff, isTRUE,h))
+    print("所有任务都已执行完毕!")
+    
+
