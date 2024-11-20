@@ -1,4 +1,5 @@
 /*
+1
 mt_interval //每次请求间隔,默认0.35
 mt_num //发送多少次请求,默认15
 mtck //帐号token 多个用@隔开 如:token=qweqq@token=qweqweqwe
